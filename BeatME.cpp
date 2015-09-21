@@ -16,25 +16,25 @@ int win(int n)
 }
 int main()
 {
-	int n=21,k,c;
-	cout<<"MATCHSTICK GAME\n"
-		"Who ever left with last matchstick to pick loses the game\n"
-		"On each turn enter a value between 1 and 4\n";
+	int iRemainingSticks=21,iUserPicked,iComputerPicked;
+	cout<<"MATCHSTICK GAME.\n"
+		"Who ever left with last matchstick to pick loses the game.\n"
+		"On each turn enter a value between 1 and 4.\n";
 	while(1)
 	{
-		cout<<"Number of matchsticks remaining="<<n<<"\nEnter value:";
-		cin>>k;
-		if(k<1||k>4)
+		cout<<"Number of matchsticks remaining="<<iRemainingSticks<<"\nEnter value:";
+		cin>>iUserPicked;
+		if(iUserPicked<1||iUserPicked>4)
 		{
 			cout<<"Value entered is not valid ( Valid range: 1 =< Value >=4 )\n";
 			continue;
 		}
-		n-=k;
-		n-=(c=win(n));
-		cout<<"Computer takes "<<c<<" matchsticks\n";
-		if(n==1)
+		iRemainingSticks-=iUserPicked;
+		iRemainingSticks-=(iComputerPicked=win(iRemainingSticks));
+		cout<<"Computer takes "<<iComputerPicked<<" matchsticks\n";
+		if(iRemainingSticks==1)
 		{
-			cout<<"Computer wins\n";
+			cout<<"You are left with " << iRemainingSticks <<" matchstick to pick Computer wins\n";
 			break;
 		}
 	}
