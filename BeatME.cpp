@@ -17,7 +17,9 @@ int win(int n)
 int main()
 {
 	int n=21,k,c;
-	cout<<"MATCHSTICK GAME\nOn each turn enter a value between 1 and 4\n";
+	cout<<"MATCHSTICK GAME\n"
+		"Who ever left with last matchstick to pick loses the game\n"
+		"On each turn enter a value between 1 and 4\n";
 	while(1)
 	{
 		cout<<"Number of matchsticks remaining="<<n<<"\nEnter value:";
