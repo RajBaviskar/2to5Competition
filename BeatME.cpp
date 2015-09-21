@@ -32,7 +32,7 @@ int main()
 		cout<<"Computer takes "<<c<<" matchsticks\n";
 		if(n==1)
 		{
-			cout<<"There is only one matchsticky remaining So Computer wins\n";
+			cout<<"Computer wins\n";
 			break;
 		}
 	}
